@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Redes Sociais</title>
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background: url(imagens/fundo-madeira.jpg) no-repeat center center ;
+            font-family: Arial, Helvetica, sans-serif;
+            transform: perspective();
+            background-size: cover;
+            height: 100vh;
+        }
+        main{
+            display: flex;
+          
+        }
+        div#celular{
+            background-image: url(imagens/frame-iphone.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            margin: auto;
+            height: 70vh;
+            width: calc(70vh * (311 / 627));
+            margin-top: 15vh;
+
+            display: flex;
+
+        }
+
+        iframe#tela{
+            display: block;
+
+            background-color: gray;
+            height: 76%;
+            width: 87%;
+    
+            margin: auto;
+            border: 1px solid rgba(0, 0, 0, 0.144);
+            border-radius: 5px;
+
+
+        }
+        iframe#tela::-webkit-scrollbar{
+            display: none;
+        }
+
+        #botoes{
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;  
+            align-items: center;
+            max-width: 60px;
+            width: 60px;
+            height: 60vh;
+
+            
+            vertical-align: middle;
+        }
+        .botao{
+            border-radius: 50%;
+            height: 50px;
+            width: 50px;
+            background-color: black;
+            
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            transition: 0.3s ease;
+
+            box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.541)  ;
+        }
+        #menubotoes{
+            position: absolute;
+            right: 0;
+            bottom: 20%;
+        }
+        .botao:hover, .botao:focus{
+            box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.541)  ,
+            50px 50px 1px inset rgba(255, 255, 255, 0.212);
+            transform: scale(1.10) translate(-5px, -5px);
+            transition: 0.5 ease;
+        }
+        
+        @media (min-width: 560px) {
+            #menubotoes{
+                right: 15%;
+            }
+        }
+
+        .naoativas{
+            box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.541)  ,
+            50px 50px 2px inset  rgba(0, 0, 0, 0.637);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        
+            <div id="celular">
+                <iframe name="tela" id="tela" src="tela-home.html" >
+                    Seu navegador é incompatível com este recurso.
+                </iframe>
+            </div>
+
+        <div id="menubotoes">
+            <div id="botoes">
+                <a href="tela-home.html" class="botao" target="tela" style="background-image: url(imagens/logo-home.jpg) ;">
+                </a>
+                <a href="tela-youtube.html" class="botao" target="tela" style="background-image: url(imagens/logo-youtube.jpg) ;"></a>
+                <a href="tela-instagram.html" class="botao" target="tela" style="background-image: url(imagens/logo-instagram.jpg);"></a>
+                <a href="tela-github.html" class="botao" target="tela" style="background-image: url(imagens/logo-github.jpg) ;"></a>
+                <a href="tela-home.html" class="botao naoativas" target="tela" style="background-image:url(imagens/logo-twitter.jpg) ;"></a>
+                <a href="tela-home.html" class="botao naoativas" target="tela" style="background-image: url(imagens/logo-facebook.jpg) ;">
+                </a>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

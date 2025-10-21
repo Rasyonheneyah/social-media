@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+
+        html, body{
+            overflow-y: scroll;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+        }
+        #imagem{
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100%;
+            
+
+        }
+        a{
+            display: block;
+
+            width: 100vw;
+            background-color: red;
+            color: white;
+            border: none;
+            font-weight: 900;
+            text-align: center;
+            text-decoration: none;
+            padding: 20px 0;
+        }
+        a:hover, a:focus{
+            box-shadow: 500px 500px 1px inset rgba(255, 255, 255, 0.212);
+
+        }
